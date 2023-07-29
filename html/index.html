@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	index page of van kiosk
+-->
+<html>
+	<head>
+		<title>Van Kiosk</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script src='js/jquery-3.6.3.min.js'></script>
+		<script src='js/jquery.csv.min.js'></script>
+	</head>
+
+	<body>
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Uppper Row-->
+			<div class="flex-container" id="upper-row">
+				<!-- Time -->
+				<div class="box" id = "clock">
+					<h3 id="timezone"></h3>
+					<h1 id="time"></h1>
+					<h2 id="date"></h2>	
+				</div>
+
+
+				<!-- Tilt Readings -->
+				<div class="flex-container reading-collection" id="tilt-readings">
+					<!-- Roll -->
+					<ul class = "flex-container box reading-list tilt-reading" id="roll">
+						<li>
+							<div class="tilt-indicator-gauge" id="roll-gauge">
+								<div class="tilt-percentage" id="roll-percentage-lb"></div>
+								<div class="tilt-percentage" id="roll-percentage-ub"></div>
+								<div class="tilt-mask"></div>
+								<ul class="reading-list tilt-indicator-center"> 
+									<li><img class ="tilt-icon" id = "roll-icon" src="data/icons/van-front.svg"></img></li>
+									<li><h2 class="tilt-text tilt-value" id = "roll-value">50°</h2></li>
+								</ul>
+							</div>
+						</li>
+						<li><h3 class="tilt-text tilt-label">Roll</h3></li>
+					</ul>
+					
+					<!-- Pitch -->
+					<ul class = "flex-container box reading-list tilt-reading" id="pitch">
+						<li>
+							<div class="tilt-indicator-gauge" id="pitch-gauge">
+								<div class="tilt-percentage" id="pitch-percentage-lb"></div>
+								<div class="tilt-percentage" id="pitch-percentage-ub"></div>
+								<div class="tilt-mask"></div>
+								<ul class="reading-list tilt-indicator-center"> 
+									<li><img class ="tilt-icon" id = "pitch-icon" src="data/icons/van-side.svg"></img></li>
+									<li><h2 class="tilt-text tilt-value" id = "pitch-value">50°</h2></li>
+								</ul>
+							</div>
+						</li>
+						<li><h3 class="tilt-text tilt-label">Pitch</h3></li>
+					</ul>
+				</div>
+				
+				<!-- Resource Readings -->
+				<div class = "flex-container" id = "resource-collection">
+					<div class="flex-container reading-collection" id="resource-readings">
+						<!-- Butane Reading -->
+						<div class="flex-container" id="butane">
+							<ul class = "flex-container box reading-list resource-box" id= "butane-box">
+								<li>
+									<div class = 'flex-container resource-view' id = 'butane-view'>
+										<div class = "resource-gauge" id = 'butane-gauge'></div>
+										<ul class = "flex-container reading-list resource-reading" id="butane-reading">
+											<h2 class="resource-text resource-value butane-text" id = "butane-value">0kg</h2>
+											<h2 class="resource-text resource-cap butane-text" id = "butane-cap">0kg</h2>
+											<h3 class="resource-text resource-percent butane-text" id = "butane-percent">0%</h3>
+										</ul>
+									</div>
+								</li>
+								<li><h3 class="resource-text resource-label  butane-text" id = "butane-label">Butane</h3></li>
+							</ul>
+						</div>
+						<!-- Water Reading -->
+						<div class="flex-container" id="water">
+							<ul class = "flex-container box reading-list resource-box" id= "water-box">
+								<li>
+									<div class = 'flex-container resource-view' id = 'water-view'>
+										<div class = "resource-gauge" id = 'water-gauge'></div>
+										<ul class = "flex-container reading-list resource-reading" id="water-reading">
+											<h2 class="resource-text resource-value water-text" id = "water-value">0kg</h2>
+											<h2 class="resource-text resource-cap water-text" id = "water-cap">0kg</h2>
+											<h3 class="resource-text resource-percent water-text" id = "water-percent">0%</h3>
+										</ul>
+									</div>
+								</li>
+								<li><h3 class="resource-text resource-label water-text" id = "water-label">Water</h3></li>
+							</ul>
+						</div>
+					</div>
+					<div class = "flex-container" id = "resource-update"></div>
+				</div>
+
+
+			</div>
+
+			<!-- Second row -->
+
+			<!-- Weather -->
+			<div class="flex-container" id="second-row">
+				<div id="weather-location"></div>
+				<div class="flex-container reading-collection" id="weather-hours"></div>
+				<div id="weather-update"></div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="js/clock.js"></script>
+		<script src="js/weather.js"></script>
+		<script src="js/tilt.js"></script>
+		<script src="js/resource.js"></script>
+
+	</body>
+</html>
