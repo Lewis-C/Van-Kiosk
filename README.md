@@ -1,4 +1,10 @@
 # Van Kiosk
-This is the code repository for an ongoing project to develop a kiosk display using a raspberry pi for a van. Currently it displays weather, time, location, tilt and butane / water levels. The code in this repository is used in a pi image with cron jobs set to run the various scripts to gather the data neccessary.
+This repository contains the Python scripts and HTML, CSS and Javascript used to take data from a van and its systems, then display it to the user. 
+
+Data used such as:
+- Propane / Water levels gained by weighing canisters using a wii fit board as a scale
+- Tilt degrees using a tilt sensor
+- Weather information for current location
+- 
 
 https://mega.nz/file/29N3zL5R#Dfk9hn3UCnUztjDisqxEr_kciQjYQv2rjnPYjRAUEB4
