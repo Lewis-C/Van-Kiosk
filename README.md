@@ -3,7 +3,7 @@ This repository contains the Python scripts and HTML, CSS and Javascript used to
 
 Data used such as:
 - Propane / Water levels gained by weighing canisters (uses a wii fit board to weigh, connected over bluetooth)
-- Tilt degrees using a tilt sensor
+- Tilt degrees using a tilt sensor (Adafruit MPU-6050)
 - Weather information for current location
 - 
 
